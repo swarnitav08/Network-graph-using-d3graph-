@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>The Office - Character Relationships</title>
+<div class="about">
+  <div><img style="margin-left:180px;margin-right:10px;float:left;" src="https://images-na.ssl-images-amazon.com/images/I/41kl2e8bYiL._AC_SX355_.jpg" width="240" height="90" align="right" alt=""></div>
+  <div class="text"><h1 style="position:relative;float:left;font-family:courier;text-align:center;color:rgb(36, 73, 147);font-size:18px">Character Relationships based on number of scenes shared</h1>
+  <p style="font-family:courier;text-align:center;font-size:15px;color:black;float:left;">Michael,Dwight,Jim and Pam form a dense network.Double click on a<br>character's node to see all characters they share scenes with,though<br>edges will appear based on slider value at that particular instance.</p></div>  
+</div>
+<script type="text/javascript" src="d3.v3.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="application/json" id="d3graph"> {
+    "links": [
+        {
+            "weight": 17.0,
+            "edge_weight": 17.0,
+            "edge_width": 3.125,
+            "source_label": "Andy",
+            "target_label": "Angela",
+            "source": 0,
+            "target": 1
+        },
+        {
+            "weight": 19.0,
+            "edge_weight": 19.0,
+            "edge_width": 3.375,
+            "source_label": "Andy",
+            "target_label": "Darryl",
+            "source": 0,
+            "target": 6
+        },
+        {
+            "weight": 42.0,
+            "edge_weight": 42.0,
+            "edge_width": 6.25,
+            "source_label": "Andy",
+            "target_label": "Erin",
+            "source": 0,
+            "target": 8
+        },
+        {
+            "weight": 5.0,
+            "edge_weight": 5.0,
+            "edge_width": 1.625,
+            "source_label": "Andy",
+            "target_label": "Kelly",
+            "source": 0,
+            "target": 10
+        },
+        {
+            "weight": 15.0,
+            "edge_weight": 15.0,
+            "edge_width": 2.875,
+            "source_label": "Andy",
+            "target_label": "Kevin",
+            "source": 0,
+            "target": 11
+        },
+        {
+            "weight": 7.0,
+            "edge_weight": 7.0,
+            "edge_width": 1.875,
+            "source_label": "Andy",
+            "target_label": "Oscar",
+            "source": 0,
+            "target": 12
+        },
+        {
+            "weight": 12.0,
+            "edge_weight": 12.0,
+            "edge_width": 2.5,
+            "source_label": "Andy",
+            "target_label": "Phyllis",
+            "source": 0,
+            "target": 2
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Andy",
+            "target_label": "Ryan",
+            "source": 0,
+            "target": 3
+        },
+        {
+            "weight": 9.0,
+            "edge_weight": 9.0,
+            "edge_width": 2.125,
+            "source_label": "Andy",
+            "target_label": "Stanley",
+            "source": 0,
+            "target": 4
+        },
+        {
+            "weight": 31.0,
+            "edge_weight": 31.0,
+            "edge_width": 4.875,
+            "source_label": "Dwight",
+            "target_label": "Andy",
+            "source": 7,
+            "target": 0
+        },
+        {
+            "weight": 26.0,
+            "edge_weight": 26.0,
+            "edge_width": 4.25,
+            "source_label": "Jim",
+            "target_label": "Andy",
+            "source": 9,
+            "target": 0
+        },
+        {
+            "weight": 10.0,
+            "edge_weight": 10.0,
+            "edge_width": 2.25,
+            "source_label": "Pam",
+            "target_label": "Andy",
+            "source": 13,
+            "target": 0
+        },
+        {
+            "weight": 15.0,
+            "edge_weight": 15.0,
+            "edge_width": 2.875,
+            "source_label": "Michael",
+            "target_label": "Andy",
+            "source": 5,
+            "target": 0
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Angela",
+            "target_label": "Erin",
+            "source": 1,
+            "target": 8
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Angela",
+            "target_label": "Kelly",
+            "source": 1,
+            "target": 10
+        },
+        {
+            "weight": 14.0,
+            "edge_weight": 14.0,
+            "edge_width": 2.75,
+            "source_label": "Angela",
+            "target_label": "Oscar",
+            "source": 1,
+            "target": 12
+        },
+        {
+            "weight": 8.0,
+            "edge_weight": 8.0,
+            "edge_width": 2.0,
+            "source_label": "Angela",
+            "target_label": "Phyllis",
+            "source": 1,
+            "target": 2
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Angela",
+            "target_label": "Ryan",
+            "source": 1,
+            "target": 3
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Angela",
+            "target_label": "Stanley",
+            "source": 1,
+            "target": 4
+        },
+        {
+            "weight": 40.0,
+            "edge_weight": 40.0,
+            "edge_width": 6.0,
+            "source_label": "Dwight",
+            "target_label": "Angela",
+            "source": 7,
+            "target": 1
+        },
+        {
+            "weight": 4.0,
+            "edge_weight": 4.0,
+            "edge_width": 1.5,
+            "source_label": "Jim",
+            "target_label": "Angela",
+            "source": 9,
+            "target": 1
+        },
+        {
+            "weight": 10.0,
+            "edge_weight": 10.0,
+            "edge_width": 2.25,
+            "source_label": "Kevin",
+            "target_label": "Angela",
+            "source": 11,
+            "target": 1
+        },
+        {
+            "weight": 14.0,
+            "edge_weight": 14.0,
+            "edge_width": 2.75,
+            "source_label": "Pam",
+            "target_label": "Angela",
+            "source": 13,
+            "target": 1
+        },
+        {
+            "weight": 16.0,
+            "edge_weight": 16.0,
+            "edge_width": 3.0,
+            "source_label": "Michael",
+            "target_label": "Angela",
+            "source": 5,
+            "target": 1
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Darryl",
+            "target_label": "Kelly",
+            "source": 6,
+            "target": 10
+        },
+        {
+            "weight": 11.0,
+            "edge_weight": 11.0,
+            "edge_width": 2.375,
+            "source_label": "Dwight",
+            "target_label": "Darryl",
+            "source": 7,
+            "target": 6
+        },
+        {
+            "weight": 3.0,
+            "edge_weight": 3.0,
+            "edge_width": 1.375,
+            "source_label": "Erin",
+            "target_label": "Darryl",
+            "source": 8,
+            "target": 6
+        },
+        {
+            "weight": 7.0,
+            "edge_weight": 7.0,
+            "edge_width": 1.875,
+            "source_label": "Jim",
+            "target_label": "Darryl",
+            "source": 9,
+            "target": 6
+        },
+        {
+            "weight": 4.0,
+            "edge_weight": 4.0,
+            "edge_width": 1.5,
+            "source_label": "Kevin",
+            "target_label": "Darryl",
+            "source": 11,
+            "target": 6
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Oscar",
+            "target_label": "Darryl",
+            "source": 12,
+            "target": 6
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Pam",
+            "target_label": "Darryl",
+            "source": 13,
+            "target": 6
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Ryan",
+            "target_label": "Darryl",
+            "source": 3,
+            "target": 6
+        },
+        {
+            "weight": 18.0,
+            "edge_weight": 18.0,
+            "edge_width": 3.25,
+            "source_label": "Michael",
+            "target_label": "Darryl",
+            "source": 5,
+            "target": 6
+        },
+        {
+            "weight": 14.0,
+            "edge_weight": 14.0,
+            "edge_width": 2.75,
+            "source_label": "Dwight",
+            "target_label": "Erin",
+            "source": 7,
+            "target": 8
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Erin",
+            "target_label": "Kelly",
+            "source": 8,
+            "target": 10
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Erin",
+            "target_label": "Ryan",
+            "source": 8,
+            "target": 3
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Erin",
+            "target_label": "Stanley",
+            "source": 8,
+            "target": 4
+        },
+        {
+            "weight": 4.0,
+            "edge_weight": 4.0,
+            "edge_width": 1.5,
+            "source_label": "Jim",
+            "target_label": "Erin",
+            "source": 9,
+            "target": 8
+        },
+        {
+            "weight": 9.0,
+            "edge_weight": 9.0,
+            "edge_width": 2.125,
+            "source_label": "Pam",
+            "target_label": "Erin",
+            "source": 13,
+            "target": 8
+        },
+        {
+            "weight": 5.0,
+            "edge_weight": 5.0,
+            "edge_width": 1.625,
+            "source_label": "Phyllis",
+            "target_label": "Erin",
+            "source": 2,
+            "target": 8
+        },
+        {
+            "weight": 18.0,
+            "edge_weight": 18.0,
+            "edge_width": 3.25,
+            "source_label": "Michael",
+            "target_label": "Erin",
+            "source": 5,
+            "target": 8
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Dwight",
+            "target_label": "Kelly",
+            "source": 7,
+            "target": 10
+        },
+        {
+            "weight": 4.0,
+            "edge_weight": 4.0,
+            "edge_width": 1.5,
+            "source_label": "Jim",
+            "target_label": "Kelly",
+            "source": 9,
+            "target": 10
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Kevin",
+            "target_label": "Kelly",
+            "source": 11,
+            "target": 10
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Oscar",
+            "target_label": "Kelly",
+            "source": 12,
+            "target": 10
+        },
+        {
+            "weight": 5.0,
+            "edge_weight": 5.0,
+            "edge_width": 1.625,
+            "source_label": "Pam",
+            "target_label": "Kelly",
+            "source": 13,
+            "target": 10
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Phyllis",
+            "target_label": "Kelly",
+            "source": 2,
+            "target": 10
+        },
+        {
+            "weight": 12.0,
+            "edge_weight": 12.0,
+            "edge_width": 2.5,
+            "source_label": "Ryan",
+            "target_label": "Kelly",
+            "source": 3,
+            "target": 10
+        },
+        {
+            "weight": 11.0,
+            "edge_weight": 11.0,
+            "edge_width": 2.375,
+            "source_label": "Michael",
+            "target_label": "Kelly",
+            "source": 5,
+            "target": 10
+        },
+        {
+            "weight": 11.0,
+            "edge_weight": 11.0,
+            "edge_width": 2.375,
+            "source_label": "Dwight",
+            "target_label": "Kevin",
+            "source": 7,
+            "target": 11
+        },
+        {
+            "weight": 11.0,
+            "edge_weight": 11.0,
+            "edge_width": 2.375,
+            "source_label": "Jim",
+            "target_label": "Kevin",
+            "source": 9,
+            "target": 11
+        },
+        {
+            "weight": 11.0,
+            "edge_weight": 11.0,
+            "edge_width": 2.375,
+            "source_label": "Kevin",
+            "target_label": "Oscar",
+            "source": 11,
+            "target": 12
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Kevin",
+            "target_label": "Phyllis",
+            "source": 11,
+            "target": 2
+        },
+        {
+            "weight": 3.0,
+            "edge_weight": 3.0,
+            "edge_width": 1.375,
+            "source_label": "Kevin",
+            "target_label": "Ryan",
+            "source": 11,
+            "target": 3
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Kevin",
+            "target_label": "Stanley",
+            "source": 11,
+            "target": 4
+        },
+        {
+            "weight": 12.0,
+            "edge_weight": 12.0,
+            "edge_width": 2.5,
+            "source_label": "Pam",
+            "target_label": "Kevin",
+            "source": 13,
+            "target": 11
+        },
+        {
+            "weight": 20.0,
+            "edge_weight": 20.0,
+            "edge_width": 3.5,
+            "source_label": "Michael",
+            "target_label": "Kevin",
+            "source": 5,
+            "target": 11
+        },
+        {
+            "weight": 7.0,
+            "edge_weight": 7.0,
+            "edge_width": 1.875,
+            "source_label": "Dwight",
+            "target_label": "Oscar",
+            "source": 7,
+            "target": 12
+        },
+        {
+            "weight": 3.0,
+            "edge_weight": 3.0,
+            "edge_width": 1.375,
+            "source_label": "Jim",
+            "target_label": "Oscar",
+            "source": 9,
+            "target": 12
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Oscar",
+            "target_label": "Phyllis",
+            "source": 12,
+            "target": 2
+        },
+        {
+            "weight": 3.0,
+            "edge_weight": 3.0,
+            "edge_width": 1.375,
+            "source_label": "Oscar",
+            "target_label": "Ryan",
+            "source": 12,
+            "target": 3
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Oscar",
+            "target_label": "Stanley",
+            "source": 12,
+            "target": 4
+        },
+        {
+            "weight": 10.0,
+            "edge_weight": 10.0,
+            "edge_width": 2.25,
+            "source_label": "Pam",
+            "target_label": "Oscar",
+            "source": 13,
+            "target": 12
+        },
+        {
+            "weight": 24.0,
+            "edge_weight": 24.0,
+            "edge_width": 4.0,
+            "source_label": "Michael",
+            "target_label": "Oscar",
+            "source": 5,
+            "target": 12
+        },
+        {
+            "weight": 16.0,
+            "edge_weight": 16.0,
+            "edge_width": 3.0,
+            "source_label": "Dwight",
+            "target_label": "Phyllis",
+            "source": 7,
+            "target": 2
+        },
+        {
+            "weight": 10.0,
+            "edge_weight": 10.0,
+            "edge_width": 2.25,
+            "source_label": "Jim",
+            "target_label": "Phyllis",
+            "source": 9,
+            "target": 2
+        },
+        {
+            "weight": 5.0,
+            "edge_weight": 5.0,
+            "edge_width": 1.625,
+            "source_label": "Pam",
+            "target_label": "Phyllis",
+            "source": 13,
+            "target": 2
+        },
+        {
+            "weight": 1.0,
+            "edge_weight": 1.0,
+            "edge_width": 1.125,
+            "source_label": "Phyllis",
+            "target_label": "Ryan",
+            "source": 2,
+            "target": 3
+        },
+        {
+            "weight": 16.0,
+            "edge_weight": 16.0,
+            "edge_width": 3.0,
+            "source_label": "Phyllis",
+            "target_label": "Stanley",
+            "source": 2,
+            "target": 4
+        },
+        {
+            "weight": 17.0,
+            "edge_weight": 17.0,
+            "edge_width": 3.125,
+            "source_label": "Michael",
+            "target_label": "Phyllis",
+            "source": 5,
+            "target": 2
+        },
+        {
+            "weight": 25.0,
+            "edge_weight": 25.0,
+            "edge_width": 4.125,
+            "source_label": "Dwight",
+            "target_label": "Ryan",
+            "source": 7,
+            "target": 3
+        },
+        {
+            "weight": 12.0,
+            "edge_weight": 12.0,
+            "edge_width": 2.5,
+            "source_label": "Jim",
+            "target_label": "Ryan",
+            "source": 9,
+            "target": 3
+        },
+        {
+            "weight": 12.0,
+            "edge_weight": 12.0,
+            "edge_width": 2.5,
+            "source_label": "Pam",
+            "target_label": "Ryan",
+            "source": 13,
+            "target": 3
+        },
+        {
+            "weight": 2.0,
+            "edge_weight": 2.0,
+            "edge_width": 1.25,
+            "source_label": "Ryan",
+            "target_label": "Stanley",
+            "source": 3,
+            "target": 4
+        },
+        {
+            "weight": 46.0,
+            "edge_weight": 46.0,
+            "edge_width": 6.75,
+            "source_label": "Michael",
+            "target_label": "Ryan",
+            "source": 5,
+            "target": 3
+        },
+        {
+            "weight": 8.0,
+            "edge_weight": 8.0,
+            "edge_width": 2.0,
+            "source_label": "Dwight",
+            "target_label": "Stanley",
+            "source": 7,
+            "target": 4
+        },
+        {
+            "weight": 9.0,
+            "edge_weight": 9.0,
+            "edge_width": 2.125,
+            "source_label": "Jim",
+            "target_label": "Stanley",
+            "source": 9,
+            "target": 4
+        },
+        {
+            "weight": 4.0,
+            "edge_weight": 4.0,
+            "edge_width": 1.5,
+            "source_label": "Pam",
+            "target_label": "Stanley",
+            "source": 13,
+            "target": 4
+        },
+        {
+            "weight": 26.0,
+            "edge_weight": 26.0,
+            "edge_width": 4.25,
+            "source_label": "Michael",
+            "target_label": "Stanley",
+            "source": 5,
+            "target": 4
+        },
+        {
+            "weight": 102.0,
+            "edge_weight": 102.0,
+            "edge_width": 13.75,
+            "source_label": "Dwight",
+            "target_label": "Jim",
+            "source": 7,
+            "target": 9
+        },
+        {
+            "weight": 30.0,
+            "edge_weight": 30.0,
+            "edge_width": 4.75,
+            "source_label": "Dwight",
+            "target_label": "Pam",
+            "source": 7,
+            "target": 13
+        },
+        {
+            "weight": 152.0,
+            "edge_weight": 152.0,
+            "edge_width": 20.0,
+            "source_label": "Michael",
+            "target_label": "Dwight",
+            "source": 5,
+            "target": 7
+        },
+        {
+            "weight": 149.0,
+            "edge_weight": 149.0,
+            "edge_width": 19.625,
+            "source_label": "Jim",
+            "target_label": "Pam",
+            "source": 9,
+            "target": 13
+        },
+        {
+            "weight": 76.0,
+            "edge_weight": 76.0,
+            "edge_width": 10.5,
+            "source_label": "Michael",
+            "target_label": "Jim",
+            "source": 5,
+            "target": 9
+        },
+        {
+            "weight": 104.0,
+            "edge_weight": 104.0,
+            "edge_width": 14.0,
+            "source_label": "Michael",
+            "target_label": "Pam",
+            "source": 5,
+            "target": 13
+        }
+    ],
+    "nodes": [
+        {
+            "node_name": "Andy",
+            "node_color": "rgb(237, 173, 8)",
+            "node_size": "11.053412462908012",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Angela",
+            "node_color": "#17BECF",
+            "node_size": "6.091328717441477",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Phyllis",
+            "node_color":  "#fb0d0d",
+            "node_size": "5.143422354104846",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Ryan",
+            "node_color": "#4daf4a",
+            "node_size": "4.4757665677546985",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Stanley",
+            "node_color": "#ff7f00",
+            "node_size": "3.8328387734915923",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Michael",
+            "node_color": "rgb(29, 105, 150)",
+            "node_size": "25.0",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Darryl",
+            "node_color": "rgb(166, 86, 40)",
+            "node_size": "3.981206726013848",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Dwight",
+            "node_color": "#B82E2E",
+            "node_size": "19.510385756676556",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Erin",
+            "node_color": "#990099",
+            "node_size": "5.060995713814704",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Jim",
+            "node_color": "rgb(15, 133, 84)",
+            "node_size": "17.72172766238048",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Kelly",
+            "node_color": "#999999",
+            "node_size": "3.5938015166501818",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Kevin",
+            "node_color": "#ffff33",
+            "node_size": "7.195845697329377",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Oscar",
+            "node_color": "rgb(253, 205, 172)",
+            "node_size": "5.909990108803165",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        },
+        {
+            "node_name": "Pam",
+            "node_color": "#DD4477",
+            "node_size": "15.84240026376525",
+            "node_size_edge": "0.10000000000000009",
+            "node_color_edge": "#000000"
+        }
+    ]
+}
+</script>
+<form>
+<h3>Scenes shared<br> 0 <input type="range" id="thersholdSlider" name="points" value=0.0 min="0.0" max="152.0" onchange="threshold(this.value)"> 152<br>Slide me!</h3>
+</form>
+<script  src="d3graphscript.js"></script>
+<footer>
+  <p style="font-family:arial;text-align:center;color:black;font-size:11.5px">Note:Only scenes featuring minimum of 2 and maximum of 3 of the above characters were considered.The node size represents percentage of total scenes the character 
+  appeared in<br>whereas the edge thickness represents the number of scenes shared with the other characters throughout the 9 seasons.</p>
+</footer>
+</body>
+</html>
