@@ -17,13 +17,6 @@ h3 {
   font-family: "courier";
 }
 
-html,body {
-
-   height: 100%;
-   width: 100%;
-
-}
-
 div {
     height: 100vh;
 }
