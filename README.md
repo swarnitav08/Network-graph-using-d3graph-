@@ -9,12 +9,12 @@ The link when opened via Chrome browser on my laptop Dell Inspiron 5559 (15.6-in
 
 <br>1) Top half of the page:</br>
 
-![image](https://user-images.githubusercontent.com/50669059/99495528-cdd52d80-2998-11eb-964f-b0583c5693ed.png)
+![image](https://user-images.githubusercontent.com/50669059/99897296-494b1d80-2cbe-11eb-8eea-2b57fcb26070.png)
 
 
 <br>2) Bottom half of the page:</br>
 
-![image](https://user-images.githubusercontent.com/50669059/99495571-dded0d00-2998-11eb-84e8-88c71e66b107.png) 
+![image](https://user-images.githubusercontent.com/50669059/99897303-5cf68400-2cbe-11eb-844d-410f0062b275.png) 
 
 ## Credits:
 d3graph python package used to build the network graph is created by Erdogan Taskesen. Original repo can be found at https://github.com/erdogant/d3graph
